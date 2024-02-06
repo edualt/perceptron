@@ -85,8 +85,8 @@ def update_weights(input_matrix):
 def plot_error_graph(iterations, errors):
     fig, ax = plt.subplots(figsize=(6, 5), dpi=100)
     ax.plot(iterations, errors, c='red', linewidth=1)
-    ax.set(xlabel='Epochs', ylabel='Error',
-           title='Error')
+    ax.set(xlabel='Epocas', ylabel='Norma del error',
+           title='Norma del error (|e|)')
     ax.grid()
     ax.set_xlim([0, len(iterations) - 1])
     ax.set_xticks(range(len(iterations)))
@@ -109,7 +109,7 @@ def plot_weights(iterations, weights):
             if index == 0:
                 ax.legend(loc='upper left', bbox_to_anchor=(0.8, 0.25))
 
-    ax.set(xlabel='Epochs', ylabel='Weights',
+    ax.set(xlabel='Epocas', ylabel='Valor del peso',
            title='Weights')
     ax.set_xlim([0, len(iteration_copy)-1])
     ax.set_xticks(range(len(iteration_copy)))
